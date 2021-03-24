@@ -1,82 +1,49 @@
 import {
-    
-    // //COMPANIES LIST
-    // FETCH_COMPANIES_REQUEST,
-    // FETCH_COMPANIES_SUCCESS,
-    // FETCH_COMPANIES_FAILURE,
-    // //COMPANY
-    // FETCH_QUESTIONS_REQUEST,
-    // FETCH_QUESTIONS_SUCCESS,
-    // FETCH_QUESTIONS_FAILURE,
-    // //OFFICER
-    // FETCH_OFFICER_DATA_REQUEST,
-    // FETCH_OFFICER_DATA_SUCCESS,
-    // FETCH_OFFICER_DATA_FAILURE,
-    // ADD_OFFICER_ARTICLE,
-    //VOTES
-    ADD_VOTE,
-    UPDATE_VOTE,
 
-  //
-  //COMPANIES LIST
-  FETCH_COMPANIES_REQUEST,
-  FETCH_COMPANIES_SUCCESS,
-  FETCH_COMPANIES_FAILURE,
-  //COMPANY
-  FETCH_QUESTIONS_REQUEST,
-  FETCH_QUESTIONS_SUCCESS,
-  FETCH_QUESTIONS_FAILURE,
-  //OFFICER
-  FETCH_OFFICER_DATA_REQUEST,
-  FETCH_OFFICER_DATA_SUCCESS,
-  FETCH_OFFICER_DATA_FAILURE,
-  ADD_OFFICER_ARTICLE,
-  //
-  //VOTES
-  ADD_VOTE,
-  UPDATE_VOTE,
+    //UPDATES
+    ADD_SUGGESTIONS,
+    UPDATE_SUGGESTIONS,
+
+    //SUGGESTIONS LIST
+    FETCH_SUGGESTIONS_REQUEST,
+    FETCH_SUGGESTIONS_SUCCESS,
+    FETCH_SUGGESTIONS_FAILURE,
+    //HAVIRKNESSET
+    FETCH_HAVIRKNESSET_REQUEST,
+    FETCH_HAVIRKNESSET_SUCCESS,
+    FETCH_HAVIRKNESSET_FAILURE,
+
+    //USERS
+    FETCH_USERS_REQUEST,
+    FETCH_USERS_SUCCESS,
+    FETCH_USERS_FAILURE,
+
 } from "./actionTypes";
 
 
 //OFFICER Actions
 
-export const fetchOfficerDataRequest = () => ({
-  type: FETCH_OFFICER_DATA_REQUEST,
+export const fetchSuggestionsDataRequest = () => ({
+    type: FETCH_SUGGESTIONS_REQUEST,
 });
 
-export const fetchOfficerDataSuccess = (content) => ({
-  type: FETCH_OFFICER_DATA_SUCCESS,
-  payload: {
-    content,
-  },
+export const fetchSuggestionsDataSuccess = (content) => ({
+    type: FETCH_SUGGESTIONS_SUCCESS,
+    payload: {
+        content,
+    },
 });
 
-export const fetchOfficerDataFailure = (error) => ({
-  type: FETCH_OFFICER_DATA_FAILURE,
-  payload: {
-    error,
-  },
+export const fetchSuggestionsDataFailure = (error) => ({
+    type: FETCH_SUGGESTIONS_FAILURE,
+    payload: {
+        error,
+    },
 });
 
-export const addOfficerArticle = (content) => ({
-  type: ADD_OFFICER_ARTICLE,
-  payload: {
-    content,
-  },
+export const addSuggestions = (content) => ({
+    type: ADD_SUGGESTIONS,
+    payload: {
+        content,
+    },
 });
-
-// //VOTES Action Types
-
-// export const addVote = (content) => ({
-//     type: ADD_VOTE,
-//     payload: {
-//         content
-//     }
-// });
-
-// export const updateVote = (content) => ({
-//     type: UPDATE_VOTE,
-//     payload: {
-//         content
-//     }
-// });

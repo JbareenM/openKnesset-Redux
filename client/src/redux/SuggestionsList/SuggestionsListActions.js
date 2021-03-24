@@ -1,48 +1,45 @@
-// import axios from 'axios';
-// import {
-//     //COMPANIES LIST
-//     FETCH_COMPANIES_REQUEST,
-//     FETCH_COMPANIES_SUCCESS,
-//     FETCH_COMPANIES_FAILURE,
+import {
+    //COMPANIES LIST
+    FETCH_SUGGESTIONS_REQUEST,
+    FETCH_SUGGESTIONS_SUCCESS,
+    FETCH_SUGGESTIONS_FAILURE,
 
-// } from '../actionTypes';
+} from '../actionTypes';
 
-// // COMPANIES LIST Action Creators
+// COMPANIES LIST Action Creators
 
-// export const fetchCompaniesRequest = () => ({
-//     type: FETCH_COMPANIES_REQUEST
-// });
+export const fetchSuggestionsRequest = () => ({
+    type: FETCH_SUGGESTIONS_REQUEST
+});
 
-// export const fetchCompaniesSuccess = (content) => ({
-//     type: FETCH_COMPANIES_SUCCESS,
-//     payload: {
-//         content
-//     }
-// });
+export const fetchSuggestionsSuccess = (content) => ({
+    type: FETCH_SUGGESTIONS_SUCCESS,
+    payload: {
+        content
+    }
+});
 
-// export const fetchCompaniesFailure = (error) => ({
-//     type: FETCH_COMPANIES_FAILURE,
-//     payload: {
-//         error
-//     }
-// });
+export const fetchSuggestionsFailure = (error) => ({
+    type: FETCH_SUGGESTIONS_FAILURE,
+    payload: {
+        error
+    }
+});
 
 
-// export function fetchCompanies() {
-//     return dispatch => {
-        
-//         dispatch(fetchCompaniesRequest())
-//         return axios.post('/proxy/get-all-Corporates', {
-//             "fundname": "מור",
-//             "chanell": "גמל/פנסיה"
-//         })
-//             .then(res => {
-//                 console.log('inside the get companies().then')
-//                 console.log(res.data.allResult);
-//                 dispatch(fetchCompaniesSuccess(res.data.allResult))
-//             })
-//             .catch(error => {
-//                 dispatch(fetchCompaniesFailure(error.message))
-//             })
-//     }
-// }
+export function fetchSuggestions() {
+    return dispatch => {
+
+        dispatch(fetchSuggestionsRequest())
+        return fetch('/suggestion/byKnessetMemberValidate')
+            .then(r => r.json())
+            .then(res => {
+                console.log('inside the get suggestions().then')
+                console.log(res);
+                dispatch(fetchSuggestionsSuccess(res));
+            })
+            .catch(error => {
+                dispatch(fetchSuggestionsFailure(error.message))
+            })
+    }
+}

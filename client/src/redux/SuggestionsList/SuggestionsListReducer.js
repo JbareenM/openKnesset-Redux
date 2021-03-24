@@ -1,39 +1,39 @@
-// import {
-//     //COMPANIES LIST
-//     FETCH_COMPANIES_REQUEST,
-//     FETCH_COMPANIES_SUCCESS,
-//     FETCH_COMPANIES_FAILURE,
+import {
+    //COMPANIES LIST
+    FETCH_SUGGESTIONS_REQUEST,
+    FETCH_SUGGESTIONS_SUCCESS,
+    FETCH_SUGGESTIONS_FAILURE,
 
-// } from '../actionTypes';
+} from '../actionTypes';
 
-// const initialState = {
-//     companies: [],
-//     loading: false,
-//     error: ''
-// };
+const initialState = {
+    suggestions: [],
+    loading: false,
+    error: ''
+};
 
-// const CompaniesListReducer = (state = initialState, action) => {
-//     switch (action.type) {
-//         case FETCH_COMPANIES_REQUEST:
-//             return {
-//                 ...state,
-//                 loading: true
-//             };
-//         case FETCH_COMPANIES_SUCCESS:
-//             return {
-//                 loading: false,
-//                 companies: action.payload.content,
-//                 error: ''
-//             };
-//         case FETCH_COMPANIES_FAILURE:
-//             return {
-//                 loading: false,
-//                 companies: [],
-//                 error: action.payload.error
-//             };
-//         default:
-//             return state;
-//     }
-// }
+const SuggestionsListReducer = (state = initialState, action) => {
+    switch (action.type) {
+        case FETCH_SUGGESTIONS_REQUEST:
+            return {
+                ...state,
+                suggestions: true
+            };
+        case FETCH_SUGGESTIONS_SUCCESS:
+            return {
+                loading: false,
+                suggestions: action.payload.content,
+                error: ''
+            };
+        case FETCH_SUGGESTIONS_FAILURE:
+            return {
+                loading: false,
+                suggestions: [],
+                error: action.payload.error
+            };
+        default:
+            return state;
+    }
+}
 
-// export default CompaniesListReducer;
+export default SuggestionsListReducer;
