@@ -5,6 +5,14 @@ import ActiveSuggestions from "../../components/activeSuggestion";
 import { useTranslation } from "react-i18next";
 
 function HaverKnesset() {
+
+  //TODO: redux
+  // const dispatch = useDispatch();
+  // useEffect(() => {
+  //   dispatch(fetchCompanies())
+  // }, []);
+  // let companies = useSelector(state => !!state.CompaniesListReducer && state.CompaniesListReducer.companies);
+
   const { t, i18n } = useTranslation();
   const [myNewSuggestions, setMyNewSuggestions] = useState([]);
   const [activeSuggestions, setActiveSuggestions] = useState([]);
