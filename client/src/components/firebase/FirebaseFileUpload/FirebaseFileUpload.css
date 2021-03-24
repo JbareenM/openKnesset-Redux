@@ -1,0 +1,42 @@
+.firebaseFileUpload {
+}
+/* .firebaseFileUpload input[type="file"] {
+  display: block;
+  
+} */
+#upload-to-firebase {
+  background: none;
+  position: relative;
+  height: 40px;
+  width: fit-content;
+  cursor: pointer;
+  border: 2px solid black;
+  margin-top: 16px;
+  background-color: white;
+  border-radius: 5px;
+}
+
+.xxxx {
+  border: solid 2px;
+  margin: 5px;
+  padding: 10px;
+}
+
+.underlinedTitle {
+  margin-bottom: 5px;
+  padding-bottom: 5px;
+  border-bottom: solid 4px black;
+  width: fit-content;
+}
+
+.uploadButton {
+  padding: 5px;
+  right: 5px;
+  right: 50px;
+  bottom: 30px;
+  font-weight: bold;
+}
+
+.MuiLinearProgress-barColorPrimary {
+  background-color: black !important;
+}

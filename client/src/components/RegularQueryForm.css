@@ -1,0 +1,144 @@
+.recomnde {
+  width: 70%;
+  margin-top: 32px;
+  height: fit-content;
+  background-color: white;
+  margin-right: auto;
+  margin-left: auto;
+  text-align: right;
+  box-shadow: 0 12px 6px -3px #cccccc;
+  overflow: scroll;
+  border-radius: 5px;
+}
+/* Hide scrollbar for Chrome, Safari and Opera */
+.recomnde::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.recomnde {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+.recomend__info {
+  width: 100%;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+}
+.select {
+  width: 200px;
+  height: 30px;
+  direction: rtl;
+}
+.reomnde__FirstHalf {
+  text-align: right;
+  width: 45%;
+  /* height: 240px; */
+  padding: 16px;
+}
+
+.reomnde__SecindHalf {
+  text-align: right;
+  margin-left: 30px;
+  width: 45%;
+  padding: 16px;
+}
+.reomnde__SecindHalf > input {
+  padding: 10px;
+  margin-top: 5px;
+  border-radius: 15px;
+  border: 5px solid black;
+  outline: none;
+  width: 100%;
+  margin-bottom: 3px;
+}
+.reomnde__SecindHalf > textarea {
+  outline: none;
+  margin-top: 5px;
+  border: 5px solid black;
+  border-radius: 20px;
+  margin-bottom: 10px;
+  width: 100%;
+  padding: 10px;
+}
+
+form {
+  width: 100%;
+}
+
+input[type="file"] {
+  display: none;
+}
+
+.attachments-div {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+.attach-title-div {
+  display: flex;
+  flex-direction: row;
+  height: 41px;
+  align-items: center;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.attach-title-div > img {
+  height: 100%;
+  margin-left: 8px;
+}
+
+.attachments-list {
+  display: grid;
+  grid-template-rows: auto auto;
+  /* background-color: gray; */
+  width: fit-content;
+  height: fit-content;
+  gap: 1px;
+  padding-top: 1px;
+  margin-top: 8px;
+}
+
+.attachment {
+  display: flex;
+  flex-direction: row;
+  padding: 8px;
+  height: 30px;
+  width: fit-content;
+  /* background-color: white; */
+  font-size: x-small;
+}
+.attachment > img {
+  max-height: 16px;
+  margin-left: 8px;
+  margin-right: 8px;
+  margin-bottom: auto;
+  margin-top: auto;
+}
+
+.attachment > p {
+  margin-bottom: auto;
+  margin-top: auto;
+}
+
+.attach-button-div .btn {
+  margin-bottom: auto;
+  margin-top: auto;
+  margin-right: 30px;
+  padding: 8px;
+}
+
+.additional-query-div {
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+  width: fit-content;
+}
+
+.additional-query-div > p {
+  font-size: smaller;
+}

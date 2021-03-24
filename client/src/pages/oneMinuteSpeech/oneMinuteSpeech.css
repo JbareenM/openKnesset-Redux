@@ -1,0 +1,35 @@
+body {
+  background-color: #f3f3f3;
+  height: 1400px;
+  align-items: center;
+  
+}
+.container {
+  margin-top: 70px;
+  width: 87%;
+  margin:auto;
+}
+.scroll::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.scroll {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+.scroll {
+  overflow: scroll;
+  height: 100px;
+}
+.up,
+.down {
+  width: 70%;
+  justify-content: space-between;
+  display: flex;
+  margin-top: 15px;
+  flex-wrap: nowrap;
+  margin-left: auto;
+  margin-right: auto;
+
+}

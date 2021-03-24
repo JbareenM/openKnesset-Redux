@@ -1,0 +1,25 @@
+.members-admin-container{
+    width: 800px;
+    height: fit-content;
+    margin: auto;
+}
+
+#search-choose{
+    width: fit-content;
+    margin: auto;
+}
+
+#input-search{
+    width: fit-content;
+    margin: auto;
+}
+
+#serach-button{
+    border-radius: 10px;
+    margin: 10px;
+    padding: 5px;
+    background-color: rgb(158, 158, 238);
+    text-align: center;
+    font-weight: 900;
+    border-color: grey;
+}

@@ -1,0 +1,23 @@
+.attachment {
+    display: flex;
+    flex-direction: row;
+    padding: 8px;
+    height: 30px;
+    width: fit-content;
+    line-height: 0px;
+    background: none !important;
+    font-size: x-small;
+  }
+  .attachment > img {
+    max-height: 16px;
+    margin-left: 8px;
+    margin-right: 8px;
+    margin-bottom: auto;
+    margin-top: auto;
+  }
+  
+  .attachment > p {
+    margin-bottom: auto;
+    margin-top: auto;
+  }
+  

@@ -1,0 +1,28 @@
+.subject {
+  display: flex;
+  flex-direction: row;
+  background-color: #414141;
+  top: 0px;
+  position: sticky;
+  height: 35px;
+  width: fit-content;
+  z-index: 999;
+}
+
+.subject-logo {
+  /* width: 30px; */
+  padding: 5px;
+}
+
+.subject-text {
+  text-align: right;
+  height: fit-content;
+  line-height: 0px;
+  width: 100px;
+  border-right: white solid 1px;
+  color: #d3d2d2;
+}
+
+.subject-text > h4 {
+  margin-right: 16px;
+}

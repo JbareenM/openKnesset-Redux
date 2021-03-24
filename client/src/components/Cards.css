@@ -1,0 +1,28 @@
+.cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  margin: auto;
+  gap: 5%;
+  row-gap: 10%;
+  padding: 20px;
+  text-align: center;
+  max-width: 1000px;
+  margin-bottom: 5%;
+}
+
+.card {
+  text-align: right;
+  padding: 10px;
+  background-color: white;
+  cursor: pointer;
+  border-radius: 2px;
+}
+
+.title {
+  font-size: x-large;
+  color: black;
+}
+
+.content {
+  font-size: large;
+}

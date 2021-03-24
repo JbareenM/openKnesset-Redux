@@ -1,0 +1,34 @@
+/* .card {
+    display: grid;
+    grid-template-columns:  auto auto;
+    text-align: center;
+    background-color: brown;
+    width: 400px;
+    margin-right: 10%;
+    margin-left: 10%;
+} */
+
+
+
+/* .card{
+    display: grid;
+    grid-template-columns:  auto auto;
+    margin-right: 10%;
+    margin-left: 10%;
+    gap: 10%;
+    padding: 20px;
+    text-align: center;  
+     
+}
+.card{
+    text-align: right;
+    padding:10px;
+    background-color: white;
+    cursor: pointer;
+}
+.title{
+     font-size: 20px;
+}
+.content{
+    font-size: 12px;
+} */

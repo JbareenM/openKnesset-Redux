@@ -1,0 +1,89 @@
+ .fixed_header{
+  width: 30vw;
+  table-layout: fixed;
+  border-collapse: collapse;
+  max-height:400px;
+  
+}
+
+.fixed_header tbody{
+display:block;
+width: 100%;
+overflow: auto;
+max-height: 400px;
+
+}
+
+.fixed_header thead tr {
+ display: block;
+
+}
+
+.fixed_header thead {
+background: grey;
+color:#fff;
+}
+
+.fixed_header th, .fixed_header td {
+padding: 5px;
+text-align: right;
+width: 200px;
+}
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+th, td {
+  padding: 5px;
+}
+
+#status-lines{
+  display: flex;
+  flex-direction: column;
+  border: 0px;
+}
+
+#header{
+  background-color: rgb(156, 152, 152);
+}
+caption{
+text-align: right;
+font-weight: 900;
+}
+
+#V{
+background-color: greenyellow;
+}
+
+#X{
+background-color: red;
+}
+
+.drop-down-menu{
+width: 200px;
+}
+
+#status{
+width: 10vw;
+}
+
+#test{
+position: relative;
+width: 10vw;
+}
+
+.suggestions-container {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: fit-content;
+  max-width: 1000px;
+  margin: auto;
+
+
+}
+.suggestions-container > .fixed_header {
+  flex:70%;
+}
+

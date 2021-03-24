@@ -1,0 +1,24 @@
+body {
+  background-color: #f3f3f3;
+  height: 1400px;
+  align-items: center;
+}
+.container {
+  margin-top: 70px;
+  width: 70%;
+  margin: auto;
+}
+
+.board-item-container {
+  background-color: white;
+  padding: 8px;
+  margin-top: 32px;
+  box-shadow: 0 6px 3px 3px grey;
+  /* border-radius: 30px 30px 100%/0 0; */
+}
+
+.board-item {
+  background-color: #f3f3f3;
+  padding: 8px;
+  color: black;
+}

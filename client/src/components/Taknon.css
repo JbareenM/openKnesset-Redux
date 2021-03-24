@@ -1,0 +1,54 @@
+.taknon {
+  width: 45%;
+  background-color: white;
+  border-radius: 2px;
+  text-align: right;
+  padding-left: 10px;
+  position: relative;
+  padding-bottom: 10px;
+}
+.taknon__data {
+  display: flex;
+  position: relative;
+  padding-left: 5px;
+  padding-right: 5px;
+  animation: floatText 45s infinite linear;
+}
+
+.taknon__data:hover {
+  animation-play-state: paused;
+}
+
+.taknon__data > h5 {
+  margin-right: 10px;
+}
+
+.taknon-right-col {
+  display: flex;
+  flex-direction: row;
+  margin-left: 5px;
+}
+
+.taknon-left-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.tkanon-section-item {
+  display: flex;
+  flex-direction: row;
+}
+
+.articl {
+  margin-right: 5px;
+}
+
+.h5-tkanon-title {
+  margin-left: 5px;
+}
+
+@keyframes floatText {
+  to {
+    transform: translateY(-100%);
+  }
+}

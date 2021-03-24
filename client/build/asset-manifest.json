@@ -1,0 +1,29 @@
+{
+  "files": {
+    "main.css": "/static/css/main.9995f4e8.chunk.css",
+    "main.js": "/static/js/main.feaf854b.chunk.js",
+    "main.js.map": "/static/js/main.feaf854b.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.e0fb6e1f.js",
+    "runtime-main.js.map": "/static/js/runtime-main.e0fb6e1f.js.map",
+    "static/css/2.23154d62.chunk.css": "/static/css/2.23154d62.chunk.css",
+    "static/js/2.8bc5eb4a.chunk.js": "/static/js/2.8bc5eb4a.chunk.js",
+    "static/js/2.8bc5eb4a.chunk.js.map": "/static/js/2.8bc5eb4a.chunk.js.map",
+    "static/js/3.c13905a1.chunk.js": "/static/js/3.c13905a1.chunk.js",
+    "static/js/3.c13905a1.chunk.js.map": "/static/js/3.c13905a1.chunk.js.map",
+    "index.html": "/index.html",
+    "static/css/2.23154d62.chunk.css.map": "/static/css/2.23154d62.chunk.css.map",
+    "static/css/main.9995f4e8.chunk.css.map": "/static/css/main.9995f4e8.chunk.css.map",
+    "static/js/2.8bc5eb4a.chunk.js.LICENSE.txt": "/static/js/2.8bc5eb4a.chunk.js.LICENSE.txt",
+    "static/media/App.css": "/static/media/Alef-regular.be6f2f30.eot",
+    "static/media/at.d6066a0b.PNG": "/static/media/at.d6066a0b.PNG",
+    "static/media/calc.16952aa1.PNG": "/static/media/calc.16952aa1.PNG",
+    "static/media/tak_icon.8af7909e.PNG": "/static/media/tak_icon.8af7909e.PNG"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.e0fb6e1f.js",
+    "static/css/2.23154d62.chunk.css",
+    "static/js/2.8bc5eb4a.chunk.js",
+    "static/css/main.9995f4e8.chunk.css",
+    "static/js/main.feaf854b.chunk.js"
+  ]
+}

@@ -1,0 +1,139 @@
+.App {
+    text-align: right;
+    direction: rtl;
+    color: #464545;
+    margin: 0;
+    font-family: Alef, Arial;
+    font-size: 16px;
+    line-height: 20px;
+    
+  }
+  html{
+    background-color: #efefef;
+  }
+  .App-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: calc(10px + 2vmin);
+    color: black;
+    padding: 12px 0 0;
+    border-bottom: 2px solid #222;
+    padding: 29px 0 0;
+    display: block;
+    font-size: 20px;
+    color: #464545;
+    font-weight: 700;
+    width: 80%;
+    margin: auto;
+  }
+  
+  .row {
+    margin-bottom: 1em;
+    margin-right: -20px;
+  }
+  div{
+    display: block;
+  }
+  
+  h1{
+    color: #464545;
+    font-size: 20px;
+    line-height: 100%;
+    letter-spacing: normal;
+    font-weight: bold;
+    display: table;
+    margin-block-start: 0.67em;
+    margin-block-end: 0.67em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    
+  }
+  a{
+    color: #496A76;
+    cursor: pointer;
+    text-decoration: none;
+  }
+  li>a{
+    color: black;
+    cursor: pointer;
+    text-decoration: none;
+  }
+  ul{
+    display: flex;
+    width: 80%;
+    padding: 0%;
+    margin:0%;
+    margin-left: auto;
+  }
+  li{
+    list-style-type: none;
+    padding:10px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: lighter;
+    border-bottom: solid #efefef00;
+  }
+  .nav>li:hover{
+    border-bottom: solid black;
+  }
+  .main-title{
+    cursor: pointer;
+    border-bottom: solid rgba(255, 255, 255, 0);
+  }
+  .main-title:hover{
+    border-bottom: solid black;
+  }
+  #app-header #logo{
+   
+    margin: 0;
+    font-size: 20px;
+    line-height: 100%;
+    letter-spacing: normal;
+    float: right;
+    margin-left: 10px;
+    line-height: 100%;
+    margin-top: -18px;
+  }
+   span {
+    padding: 29px 0 0;
+    font-size: 20px;
+    color: #464545;
+    font-weight: 700;
+  }
+  img{
+    height: auto;
+    vertical-align: middle;
+    border:0;
+    max-width: 100%;
+  }
+  
+  .secondary-nav-bar{
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+    padding: 10px;
+    font-size: 14px;
+  }
+
+  .user-links{
+    width:fit-content;
+  }
+  .path .current-tab-name{
+    width: fit-content;
+    font-size: inherit;
+  
+  }
+  .row{
+    display: flex;
+    align-items: center;
+  }
+
+  .left-nav{
+    margin-right: auto;
+  }
+
+  #nav-parties-hidden{
+    display:none;
+  }
