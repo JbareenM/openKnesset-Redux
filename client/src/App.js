@@ -73,17 +73,17 @@ export default function App() {
         <nav className={DEBUG ? "all-tabs" : "all-tabs-hidden"}>
           <ul>
             <li className="active-nav">
-              <Link  to="/parliamentaryTool">
+              <Link to="/parliamentaryTool">
                 parliamentaryTools
               </Link>
             </li>
             <li className="non-active-nav">
-              <Link  to="/normalquery">
+              <Link to="/normalquery">
                 normalquery
               </Link>
             </li>
             <li className="non-active-nav">
-              <Link  to="/kenosKnesset">
+              <Link to="/kenosKnesset">
                 kenosKnesset
               </Link>
             </li>
@@ -93,7 +93,7 @@ export default function App() {
               </Link>
             </li>
             <li className="non-active-nav">
-              <Link  to="/trackingBoard">
+              <Link to="/trackingBoard">
                 trackingBoard
               </Link>
             </li>
@@ -107,27 +107,27 @@ export default function App() {
               <Link to="/resetPassword">resetPassword</Link>
             </li>
             <li className="non-active-nav">
-              <Link  to="/haverKnesset">
+              <Link to="/haverKnesset">
                 haverKnesset
               </Link>
             </li>
             <li className="non-active-nav">
-              <Link  to="/adminPage">
+              <Link to="/adminPage">
                 adminPage
               </Link>
             </li>
             <li className="non-active-nav">
-              <Link  to="/addKnesset">
+              <Link to="/addKnesset">
                 addKnesset
               </Link>
             </li>
             <li className="non-active-nav">
-              <Link  to="/members">
+              <Link to="/members">
                 members
               </Link>
             </li>
             <li className="non-active-nav">
-              <Link  to="/spamSuggestions">
+              <Link to="/spamSuggestions">
                 spamSuggestions
               </Link>
             </li>
@@ -142,6 +142,8 @@ export default function App() {
               user={user}
               show={true}
               connected={connected}
+              setUser={setUser}
+              setConnected={setConnected}
               pages={[{ text: "כלים פרלמנטריים", url: "parliamentaryTool" }]}
             />
             <ParliamentaryTool />
@@ -151,6 +153,8 @@ export default function App() {
               user={user}
               show={true}
               connected={connected}
+              setUser={setUser}
+              setConnected={setConnected}
               pages={[
                 { text: "כלים פרלמנטריים", url: "parliamentaryTool" },
                 { text: "שיאלתה רגילה", url: "normalquery" },
@@ -163,39 +167,47 @@ export default function App() {
               user={user}
               show={true}
               connected={connected}
+              setUser={setUser}
+              setConnected={setConnected}
               pages={[
                 { text: "כלים פרלמנטריים", url: "parliamentaryTool" },
                 { text: "כינוס הכנסת בזמן הפגרה", url: "kenosKnesset" },
               ]}
             />
-          {user.type === "citizen" ? <KenosKnesset /> : <div>you're not allowed</div>}
+            {user.type === "citizen" ? <KenosKnesset /> : <div>you're not allowed</div>}
           </Route>
           <Route path="/oneMinuteSpeech">
             <Header
               user={user}
               show={true}
               connected={connected}
+              setUser={setUser}
+              setConnected={setConnected}
               pages={[
                 { text: "כלים פרלמנטריים", url: "parliamentaryTool" },
                 { text: "נאום בן דקה", url: "oneMinuteSpeech" },
               ]}
             />
-            <OneMinuteSpeech/>
+            <OneMinuteSpeech />
           </Route>
           <Route path="/trackingBoard">
             <Header
               user={user}
               show={true}
               connected={connected}
+              setUser={setUser}
+              setConnected={setConnected}
               pages={[{ text: "לוח מעקב", url: "trackingBoard" }]}
             />
-              {user.type === "citizen" ?  <TrackingBoard /> : <div>you're not allowed</div>}
+            {user.type === "citizen" ? <TrackingBoard /> : <div>you're not allowed</div>}
           </Route>
           <Route path="/loginRegisteration">
             <Header
               user={user}
               show={false}
               connected={false}
+              setUser={setUser}
+              setConnected={setConnected}
               pages={[{ text: "הרשמה והתחברות", url: "loginRegisteration" }]}
             />
             <Login setUser={setUser} setConnected={setConnected} />
@@ -205,6 +217,8 @@ export default function App() {
               user={user}
               show={false}
               connected={false}
+              setUser={setUser}
+              setConnected={setConnected}
               pages={[
                 { text: "הרשמה והתחברות", url: "loginRegisteration" },
                 { text: "שכחתי סיסמה", url: "forgetpassword" },
@@ -216,7 +230,9 @@ export default function App() {
             <Header
               user={user}
               show={false}
-              connected={false}
+              connected={false} 
+              setUser={setUser}
+              setConnected={setConnected}
               pages={[
                 { text: "הרשמה והתחברות", url: "loginRegisteration" },
                 { text: "שינוי סיסמה", url: "resetPassword" },
@@ -229,6 +245,8 @@ export default function App() {
               user={user}
               show={true}
               connected={connected}
+              setUser={setUser}
+              setConnected={setConnected}
               pages={[{ text: "מערכת ח״כ", url: "haverKnesset" }]}
             />
             {user.type === "knessetMember" ? <HaverKnesset /> : <div>you're not allowed</div>}
@@ -238,51 +256,61 @@ export default function App() {
               user={user}
               show={true}
               connected={connected}
+              setUser={setUser}
+              setConnected={setConnected}
               pages={[{ text: "הנהלה", url: "adminPage" }]}
             />
-              {user.type === "admin" ?  <AdminPage /> : <div>you're not allowed</div>}
+            {user.type === "admin" ? <AdminPage /> : <div>you're not allowed</div>}
           </Route>
           <Route path="/addKnesset">
             <Header
               user={user}
               show={true}
               connected={connected}
+              setUser={setUser}
+              setConnected={setConnected}
               pages={[
                 { text: "הנהלה", url: "adminPage" },
                 { text: "הוספת חברי כנסת", url: "addKnesset" },
               ]}
             />
-            {user.type === "admin" ?   <AddKnesset /> : <div>you're not allowed</div>}
+            {user.type === "admin" ? <AddKnesset /> : <div>you're not allowed</div>}
           </Route>
           <Route path="/members">
             <Header
               user={user}
               show={true}
               connected={connected}
+              setUser={setUser}
+              setConnected={setConnected}
               pages={[
                 { text: "הנהלה", url: "adminPage" },
                 { text: "משתמשים", url: "members" },
               ]}
             />
-             {user.type === "admin" ?   <Members /> : <div>you're not allowed</div>}
+            {user.type === "admin" ? <Members /> : <div>you're not allowed</div>}
           </Route>
           <Route path="/spamSuggestions">
             <Header
               user={user}
               show={true}
               connected={connected}
+              setUser={setUser}
+              setConnected={setConnected}
               pages={[
                 { text: "הנהלה", url: "adminPage" },
                 { text: "הצעות", url: "spamSuggestions" },
               ]}
             />
-            {user.type === "admin" ?   <SpamSuggestions /> : <div>you're not allowed</div>}
+            {user.type === "admin" ? <SpamSuggestions /> : <div>you're not allowed</div>}
           </Route>
           <Route path="/">
             <Header
               user={user}
               show={true}
               connected={connected}
+              setUser={setUser}
+              setConnected={setConnected}
               pages={[{ text: "כלים פרלמנטריים", url: "parliamentaryTool" }]}
             />
             <ParliamentaryTool />

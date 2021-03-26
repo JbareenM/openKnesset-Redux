@@ -69,6 +69,8 @@ function Header(props) {
         breadcrumbList={props.pages}
         userType={props.user.type}
         connected={props.connected}
+        setUser={props.setUser}
+        setConnected={props.setConnected}
       />
     </div>
   );

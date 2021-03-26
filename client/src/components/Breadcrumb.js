@@ -1,23 +1,30 @@
 import "./Breadcrumb.css";
 import { Link, useHistory } from "react-router-dom";
-import {fetchLogOut} from '../redux';
+import { fetchLogOut } from '../redux';
 import { useDispatch, useSelector } from 'react-redux';
-import React, {useEffect } from 'react';
+import React, { useEffect } from 'react';
 
 function Breadcrumb(props) {
   const dispatch = useDispatch();
   const history = useHistory();
   let user = useSelector(state => state.UserReducer);
-  
+  const { setUser, setConnected } = props;
+
   useEffect(() => {
     console.log(user);
     history.push("loginRegisteration");
-                  
-}, [user]);
+
+  }, [user]);
   function logout() {
     console.log("disconnect");
     dispatch(fetchLogOut());
-
+    setConnected(false);
+    setUser({
+      type: "",
+      firstName: "",
+      lastName: "",
+      email: "",
+    });
     // fetch("/user/deleteCookie", {
     //   method: "POST",
     //   headers: {
@@ -58,9 +65,9 @@ function Breadcrumb(props) {
               href={
                 props.userType === "knessetMember"
                   ? "haverKnesset"
-                : props.userType === "citizen"
-                  ? "trackingBoard"
-                  : "#"
+                  : props.userType === "citizen"
+                    ? "trackingBoard"
+                    : "#"
               }
             >
               {" "}
