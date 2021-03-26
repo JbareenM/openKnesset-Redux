@@ -11,4 +11,4 @@ export { fetchSuggestions } from "./SuggestionsList/SuggestionsListActions";
 
 // export { fetchOfficerData, fetchOfficerArticles, addOfficerArticle } from './Officer/OfficerActions';
 
-// export { fetchUserData} from './User/UserActions';
+export { fetchUserData} from './User/UserActions';

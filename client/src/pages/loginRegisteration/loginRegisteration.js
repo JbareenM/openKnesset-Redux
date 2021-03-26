@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 import './loginRegisteration.css'
 import { useHistory } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
+import { useDispatch, useSelector } from 'react-redux';
+import {fetchUserData} from '../../redux';
 import {
     BrowserRouter as Router,
     Switch,
@@ -12,6 +14,8 @@ import { Label } from 'reactstrap';
 
 
 function LoginRegisteration(props) {
+    const dispatch = useDispatch();
+    let user = useSelector(state => state.UserReducer);
     const { t, i18n } = useTranslation();
     const history = useHistory();
     const [loginEmail, setLoginEmail] = useState("");
@@ -31,35 +35,22 @@ function LoginRegisteration(props) {
     }, []);
 
 
-    function handleLogin(e) {
+     function handleLogin(e) {
         e.preventDefault();
-        fetch('/user/login', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify({ email: loginEmail.toLowerCase(), password: loginPassword })
-        }).then(r => r.json())
-            .then(data => {
-                console.log("sent data: ", { loginEmail: loginEmail.toLowerCase(), password: loginPassword });
-                console.log("server data: ", data);
-                // if login true - redirect to forms creation page;
-                if (data.ok === true) {
-                    setUser({ type: data.role, firstName: data.firstName, lastName: data.lastName, email: data.email });
-                    setConnected(true);
-                    if (data.role === "citizen")
-                        history.push('/parliamentaryTool')
-                    else if (data.role === "knessetMember") {
-                        history.push('/haverKnesset')
+        console.log( dispatch(fetchUserData({loginEmail,loginPassword})));
+        if (user && user.isLoggedin) {
+                        if (user.role === "citizen")
+                            history.push('/parliamentaryTool')
+                        else if (user.role === "knessetMember") {
+                            history.push('/haverKnesset')
+                        }
+                        else if (user.role === "admin") {
+                            history.push('/adminPage')
+                        }
                     }
-                    else if (data.role === "admin") {
-                        history.push('/adminPage')
+                    else {
+                        setError("דוא״ל או סיסמה שגויים!");
                     }
-                }
-                else {
-                    setError("דוא״ל או סיסמה שגויים!");
-                }
-            })
     }
 
 
@@ -104,7 +95,8 @@ function LoginRegisteration(props) {
     return (
 
         <div>
-
+           {true ? JSON.stringify(user): null}
+   
             <div className="user-container">
 
                 <form onSubmit={handleLogin} className="user-login-div">

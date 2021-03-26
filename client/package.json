@@ -19,7 +19,7 @@
     "react-i18next": "^11.8.9",
     "react-redux": "^7.2.3",
     "react-router-dom": "^5.2.0",
-    "react-scripts": "4.0.1",
+    "react-scripts": "^4.0.1",
     "react-table-scrollbar": "^0.1.9",
     "reactjs-popup": "^2.0.4",
     "reactstrap": "^8.9.0",
