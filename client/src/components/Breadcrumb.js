@@ -1,24 +1,36 @@
 import "./Breadcrumb.css";
 import { Link, useHistory } from "react-router-dom";
+import {fetchLogOut} from '../redux';
+import { useDispatch, useSelector } from 'react-redux';
+import React, {useEffect } from 'react';
 
 function Breadcrumb(props) {
+  const dispatch = useDispatch();
   const history = useHistory();
-
-  function test() {
+  let user = useSelector(state => state.UserReducer);
+  
+  useEffect(() => {
+    console.log(user);
+    history.push("loginRegisteration");
+                  
+}, [user]);
+  function logout() {
     console.log("disconnect");
-    fetch("/user/deleteCookie", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(),
-    })
-      .then((r) => r.json())
-      .then((data) => {
-        console.log("connected: ", props.connected);
-        console.log(data);
-        history.push("loginRegisteration");
-      });
+    dispatch(fetchLogOut());
+
+    // fetch("/user/deleteCookie", {
+    //   method: "POST",
+    //   headers: {
+    //     "Content-Type": "application/json",
+    //   },
+    //   body: JSON.stringify(),
+    // })
+    //   .then((r) => r.json())
+    //   .then((data) => {
+    //     console.log("connected: ", props.connected);
+    //     console.log(data);
+    //     history.push("loginRegisteration");
+    //   });
   }
 
   return (
@@ -36,7 +48,7 @@ function Breadcrumb(props) {
         </div>
         {props.connected ? (
           <div className="user-links">
-            <a className="disconnect" href="#" onClick={test}>
+            <a className="disconnect" href="#" onClick={logout}>
               {" "}
               התנתק{" "}
             </a>

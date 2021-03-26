@@ -25,7 +25,7 @@ export default function App() {
   const [connected, setConnected] = useState(false);
   const [user, setUser] = useState({});
 
-  const DEBUG = false;
+  const DEBUG = true;
 
   useEffect(() => {
     fetch("/user/checkConnection", {
@@ -68,32 +68,32 @@ export default function App() {
   }
 
   return (
-    <Router onChange={checkConnection}>
+    <Router>
       <div>
         <nav className={DEBUG ? "all-tabs" : "all-tabs-hidden"}>
           <ul>
             <li className="active-nav">
-              <Link onClick={checkConnection} to="/parliamentaryTool">
+              <Link  to="/parliamentaryTool">
                 parliamentaryTools
               </Link>
             </li>
             <li className="non-active-nav">
-              <Link onClick={checkConnection} to="/normalquery">
+              <Link  to="/normalquery">
                 normalquery
               </Link>
             </li>
             <li className="non-active-nav">
-              <Link onClick={checkConnection} to="/kenosKnesset">
+              <Link  to="/kenosKnesset">
                 kenosKnesset
               </Link>
             </li>
             <li className="non-active-nav">
-              <Link onClick={checkConnection} to="/oneMinuteSpeech">
+              <Link to="/oneMinuteSpeech">
                 oneMinuteSpeech
               </Link>
             </li>
             <li className="non-active-nav">
-              <Link onClick={checkConnection} to="/trackingBoard">
+              <Link  to="/trackingBoard">
                 trackingBoard
               </Link>
             </li>
@@ -107,27 +107,27 @@ export default function App() {
               <Link to="/resetPassword">resetPassword</Link>
             </li>
             <li className="non-active-nav">
-              <Link onClick={checkConnection} to="/haverKnesset">
+              <Link  to="/haverKnesset">
                 haverKnesset
               </Link>
             </li>
             <li className="non-active-nav">
-              <Link onClick={checkConnection} to="/adminPage">
+              <Link  to="/adminPage">
                 adminPage
               </Link>
             </li>
             <li className="non-active-nav">
-              <Link onClick={checkConnection} to="/addKnesset">
+              <Link  to="/addKnesset">
                 addKnesset
               </Link>
             </li>
             <li className="non-active-nav">
-              <Link onClick={checkConnection} to="/members">
+              <Link  to="/members">
                 members
               </Link>
             </li>
             <li className="non-active-nav">
-              <Link onClick={checkConnection} to="/spamSuggestions">
+              <Link  to="/spamSuggestions">
                 spamSuggestions
               </Link>
             </li>

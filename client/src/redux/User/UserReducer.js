@@ -49,39 +49,15 @@ import {
         };
       case USER_LOGOUT:
         return {
-          userFirstName: "",
-          userlastName: "",
-          userEmail: "",
-          userType: "",
-          password: "",
-          loading: false,
-        };
-  
-      case USER_SIGNUP_REQUEST:
-        return {
-          ...state,
-          loading: true,
-        };
-      case USER_SIGNUP_SUCCESS:
-        return {
-          userFirstName: action.payload.firstName,
-          userlastName: action.payload.lastName,
-          userEmail: action.payload.email,
-          userType: action.payload.type,
-          password: action.payload.password,
+          firstName: "",
+          lastName: "",
+          email: "",
+          role: "",
           loading: false,
           error: "",
+          isLoggedin: false,
         };
-      case USER_SIGNUP_FAILURE:
-        return {
-          userFirstName: "",
-          userlastName: "",
-          userEmail: "",
-          userType: "",
-          password: "",
-          loading: false,
-          error: action.payload.error,
-        };
+  
       default:
         return state;
     }

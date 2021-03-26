@@ -1,3 +1,5 @@
+
+
 import {
     //USER
     USER_LOGIN_REQUEST,
@@ -56,6 +58,27 @@ export const userLoginRequest = () => ({
         .catch((error) => {
           console.log(error);
           dispatch(userLoginFailure(error.message));
+        });
+    };
+  }
+
+  export function fetchLogOut(content) {
+    return (dispatch) => {
+
+        fetch("/user/deleteCookie", {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(),
+        })
+        .then(r => r.json())
+        .then((data) => {
+            console.log(data);
+          dispatch(userLogout());
+        })
+        .catch((error) => {
+          console.log(error);
         });
     };
   }

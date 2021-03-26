@@ -31,14 +31,15 @@ function LoginRegisteration(props) {
     const { setUser, setConnected } = props;
 
     useEffect(() => {
-
-    }, []);
-
-
-     function handleLogin(e) {
-        e.preventDefault();
-        console.log( dispatch(fetchUserData({loginEmail,loginPassword})));
-        if (user && user.isLoggedin) {
+        console.log(user);
+              if (user && user.isLoggedin) {
+                setUser({
+                    type: user.role,
+                    firstName: user.firstName,
+                    lastName: user.lastName,
+                    email: user.email,
+                  });
+                setConnected(true);          
                         if (user.role === "citizen")
                             history.push('/parliamentaryTool')
                         else if (user.role === "knessetMember") {
@@ -51,6 +52,13 @@ function LoginRegisteration(props) {
                     else {
                         setError("דוא״ל או סיסמה שגויים!");
                     }
+
+    }, [user]);
+
+
+     function handleLogin(e) {
+        e.preventDefault();
+        dispatch(fetchUserData({loginEmail,loginPassword}));
     }
 
 
